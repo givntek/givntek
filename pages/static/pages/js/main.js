@@ -1,0 +1,1 @@
+let app = new Reef('#app');

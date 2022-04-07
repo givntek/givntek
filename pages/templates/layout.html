@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Givntek</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/leaflet/leaflet.css' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/reefjs@11/dist/reef.min.js"></script>
+    <script src="{% static 'pages/js/leaflet/leaflet.js' %}"></script>
+    <script src="{% static 'pages/js/main.js' %}"></script>
+</head>
+
+    <body class="font-serif">
+        <div id="page" class="bg-white">
+            {% include 'pages/parts/fixed.html' %}
+  
+            <header class="relative overflow-hidden">
+                {% include 'pages/parts/menu.html' %}
+            </header>
+          
+            <main>
+                {% block content %}{% endblock content %}
+            </main>
+            {% include 'pages/parts/footer.html' %}
+        </div>
+    </body>
+</html>

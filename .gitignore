@@ -48,3 +48,6 @@ data/
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# Mac # 
+.DS_Store
