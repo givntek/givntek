@@ -1,0 +1,48 @@
+{% load static %}
+<nav>
+  <ul class="flex items-center content-around vh-5">
+    <li class="flex1">
+      <a href="" class="mute"
+        ><img src="{% static 'pages/svg/menu.svg' %}" width="24" alt="Menu"
+      /></a>
+      {% include 'pages/parts/menu-fixed.html' %}
+    </li>
+    <li class="flex1">
+      <a href="/" class=""></a>
+      <img src="{% static 'pages/img/logo.png' %}" width="30" alt="logo" />
+      </a>
+    </li>
+    <li class="flex10 relative">
+      <span class="absolute pos-rightH">
+        <img
+          src="{% static 'pages/svg/search.svg' %}"
+          width="24"
+          alt="Menu"
+        /> </span
+      ><input
+        type="text"
+        name="search"
+        class="w-100"
+        value=""
+        placeholder="rechercher"
+      />
+    </li>
+    <li class="flex1">
+      <a href="" title="Ajout" class="flex items-center content-center mute"
+        ><img
+          src="{% static 'pages/svg/plus-circle.svg' %}"
+          width="24"
+          alt="Ajouter un objet" /><span class="dropdown-caret"></span
+      ></a>
+    </li>
+    <li class="flex1">
+      <a href="" class="mute"
+        ><img
+          src="{% static 'pages/img/avatar-big.jpg' %}"
+          width="24"
+          class="rounded"
+      /></a>
+      {% include 'pages/parts/menu-user.html' %}
+    </li>
+  </ul>
+</nav>
